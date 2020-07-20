@@ -4,11 +4,15 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import Signup from '../components/signup';
 export default function Home({ allPostsData }) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        {/* <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script> */}
+        {/* <script defer src="../Firebase/init-firebase.js"></script> */}
       </Head>
       <section className={utilStyles.headingMd}>
         <p>Web developer dedicated to building a better internet experience. Mainly focusing on Javascript, React, NodeJS and Firebase.</p>
@@ -17,6 +21,7 @@ export default function Home({ allPostsData }) {
           <a href="https://nextjs.org/learn">Click.</a>
         </p>
       </section>
+      <Signup />
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
